@@ -1,0 +1,37 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.crossover.ws</groupId>
+  <artifactId>crossoverws</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>crossoverws Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/javax.xml.ws/jaxws-api -->
+	<dependency>
+	    <groupId>javax.xml.ws</groupId>
+	    <artifactId>jaxws-api</artifactId>
+	    <version>2.2.11</version>
+	</dependency>
+		<dependency>
+	    <groupId>org.apache.maven.shared</groupId>
+	    <artifactId>maven-invoker</artifactId>
+	    <version>2.2</version>
+	</dependency>
+	<dependency>
+		<groupId>com.crossover.util</groupId>
+		<artifactId>crossoverutil</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
+  </dependencies>
+  <build>
+    <finalName>crossoverws</finalName>
+  </build>
+</project>

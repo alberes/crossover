@@ -1,0 +1,19 @@
+package com.crossover.util.crossoverutil;
+
+import java.util.List;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+import com.crossover.util.compile.CompilerHelper;
+
+public class CompilerHelperTest {
+
+	@Test
+	public void testCompile() {
+		CompilerHelper compiler = new CompilerHelper();
+		List<String> list = compiler.compile("/opt/dev/projects/crossover/test/compiler/src", "/opt/dev/projects/crossover/test/compiler/classes");
+		Assert.assertTrue("All files was compiled ", list.isEmpty());
+	}
+
+}

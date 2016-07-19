@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=crossoverutil/src\/main\/java&lt;com.crossover.util.zip{ZipHelper.java[ZipHelper" modifiers="1" timestamp="1466447678000"/>
+<typeInfo handle="=crossoverutil/\/home\/alberes\/.m2\/repository\/org\/apache\/maven\/shared\/maven-invoker\/2.2\/maven-invoker-2.2.jar&lt;org.apache.maven.shared.invoker(InvocationOutputHandler.class[InvocationOutputHandler" modifiers="1537" timestamp="1466461229000"/>
+<typeInfo handle="=crossoverweb/src\/main\/java&lt;com.crossover.command{ActionCommand.java[ActionCommand" modifiers="1025" timestamp="1466722241000"/>
+<typeInfo handle="=crossoverweb/\/home\/alberes\/.m2\/repository\/javax\/servlet\/javax.servlet-api\/3.1.0\/javax.servlet-api-3.1.0.jar&lt;javax.servlet.http(HttpServlet.class[HttpServlet" modifiers="1057" timestamp="1466722211000"/>
+<typeInfo handle="=crossoverweb/src\/main\/java&lt;com.crossover.dao{CrossoverDAO.java[CrossoverDAO" modifiers="513" timestamp="1466862647000"/>
+<typeInfo handle="=crossoverws/src\/main\/java&lt;com.crossover.ws{Compiler.java[Compiler" modifiers="1" timestamp="1466898678000"/>
+</typeInfoHistroy>

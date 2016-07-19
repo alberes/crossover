@@ -1,0 +1,57 @@
+package com.crossover.web;
+
+import java.io.IOException;
+import java.util.Properties;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebInitParam;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.log4j.Logger;
+
+/**
+ * Servlet implementation class MainServletController
+ */
+@WebServlet(
+		urlPatterns = { "/MainServletController" }, 
+		initParams = { 
+				@WebInitParam(name = "mapping", value = "/WEB-INF/mappings.properties"), 
+				@WebInitParam(name = "log4j-properties-location", value = "WEB-INF/log4j.properties")
+		})
+public class MainServletController extends HttpServlet {
+	
+	private static final long serialVersionUID = 1L;
+    
+	
+	Logger logger = Logger.getLogger(MainServletController.class);
+	
+	private Properties mappings;
+	
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public MainServletController() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

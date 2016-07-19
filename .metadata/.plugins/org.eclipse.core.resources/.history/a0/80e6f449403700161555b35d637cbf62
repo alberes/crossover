@@ -1,0 +1,34 @@
+package com.crossover.util.crossoverutil;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+import com.crossover.util.compile.CompilerHelper;
+
+public class CompilerHelperTest {
+
+	@Test
+	public void testCompile() {
+		File f = new File("/opt/dev/projects/crossover/test/compiler/classes");
+		f.mkdir();
+
+		CompilerHelper compiler = new CompilerHelper();
+		List<String> list = compiler.compile("/opt/dev/projects/crossover/test/compiler/src", "/opt/dev/projects/crossover/test/compiler/classes");
+		Assert.assertTrue("All files was compiled ", list.isEmpty());
+	}
+	
+	@Test
+	public void testcompileMavenProject(){
+		CompilerHelper compiler = new CompilerHelper();
+		
+		List<String> commands = new ArrayList<String>();
+		commands.add("install");
+		
+		compiler.compileMavenProject("", commands);
+	}
+
+}

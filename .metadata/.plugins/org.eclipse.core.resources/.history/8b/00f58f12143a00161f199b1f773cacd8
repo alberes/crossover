@@ -1,0 +1,50 @@
+package com.crossover.command;
+
+import java.io.File;
+import java.util.List;
+
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.FileUploadException;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
+import org.apache.log4j.Logger;
+
+public class UploadFileAction extends ActionCommand {
+
+	Logger logger = Logger.getLogger(DownloadFileAction.class);
+	
+	@Override
+	public void execute() {
+		DiskFileItemFactory factory = new DiskFileItemFactory();
+		String path = "/opt/dev/projects/crossover/test/tmp";
+		File repository = new File(path);
+		factory.setRepository(repository);
+		
+		// Create a new file upload handler
+		ServletFileUpload upload = new ServletFileUpload(factory);
+		
+		// Parse the request
+		List<FileItem> items;
+
+		try {
+			items = upload.parseRequest(this.getRequest());
+			for(FileItem item : items){
+				String fileName = new File(item.getName()).getName();
+				String filePath = "/opt/dev/projects/crossover/test/files" + File.separator + fileName;
+				File storeFile = new File(filePath);
+				storeFile.getParentFile().mkdirs();
+				// saves the file on disk
+				item.write(storeFile);
+				
+			}
+		} catch (FileUploadException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		this.forward("/WEB-INF/jsp/upload.jsp");
+		//this.forward("/WEB-INF/jsp/upload.jsp");
+
+	}
+
+}
